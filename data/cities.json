@@ -35,6 +35,66 @@
         "lng": 13.376933665713324
       },
       "id": 98443197
+    },
+    {
+      "cityName": "Zhongwei",
+      "country": "China",
+      "emoji": "🇨🇳",
+      "date": "2025-07-22T13:56:21.429Z",
+      "notes": "adasd",
+      "position": {
+        "lat": "37.558790268948016",
+        "lng": "105.44755057433241"
+      },
+      "id": 98443198
+    },
+    {
+      "cityName": "Assais-les-Jumeaux",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2025-07-22T14:01:00.733Z",
+      "notes": "",
+      "position": {
+        "lat": "46.800059446787316",
+        "lng": "-0.04957640994295742"
+      },
+      "id": 98443199
+    },
+    {
+      "cityName": "Assais-les-Jumeaux",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2025-07-22T14:01:00.733Z",
+      "notes": "sadasdasd",
+      "position": {
+        "lat": "46.800059446787316",
+        "lng": "-0.04957640994295742"
+      },
+      "id": 98443200
+    },
+    {
+      "cityName": "Saoner",
+      "country": "India",
+      "emoji": "🇮🇳",
+      "date": "2025-07-22T14:37:06.938Z",
+      "notes": "adsda",
+      "position": {
+        "lat": "21.453068633086783",
+        "lng": "78.73410043074931"
+      },
+      "id": 98443201
+    },
+    {
+      "cityName": "Saoner",
+      "country": "India",
+      "emoji": "🇮🇳",
+      "date": "2025-07-22T14:37:53.636Z",
+      "notes": "gexx",
+      "position": {
+        "lat": "21.453068633086783",
+        "lng": "78.73410043074931"
+      },
+      "id": 98443202
     }
   ]
 }
