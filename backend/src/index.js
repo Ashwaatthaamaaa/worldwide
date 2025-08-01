@@ -10,9 +10,9 @@ dotenv.config();
 
 const app = new Hono();
 
-// CORS middleware
+// CORS middleware - Allow all origins for development
 app.use('/*', cors({
-  origin: ['http://localhost:5173', 'http://localhost:3000'], // Add your frontend URLs
+  origin: '*', // Allow all origins for now
   allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowHeaders: ['Content-Type', 'Authorization'],
 }));
