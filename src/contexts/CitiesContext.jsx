@@ -6,7 +6,9 @@ import {
   useReducer,
 } from "react";
 
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = import.meta.env.PROD 
+  ? import.meta.env.VITE_API_URL 
+  : "http://localhost:8000";
 
 const CitiesContext = createContext();
 
@@ -44,7 +46,9 @@ function reducer(state, action) {
       return {
         ...state,
         isLoading: false,
-        cities: state.cities.filter((city) => city.id !== action.payload),
+        cities: state.cities.filter((city) => 
+          (city._id || city.id) !== action.payload
+        ),
         currentCity: {},
       };
 
@@ -91,7 +95,8 @@ function CitiesProvider({ children }) {
   }, []);
 
   async function getCity(id) {
-    if (Number(id) === currentCity.id) return;
+    const currentId = currentCity._id || currentCity.id;
+    if (id === currentId) return;
 
     dispatch({ type: "loading" });
     try {
