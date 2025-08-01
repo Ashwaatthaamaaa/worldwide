@@ -12,20 +12,21 @@ const formatDate = (date) =>
 
 function CityItem({ city }) {
   const { currentCity, deleteCity } = useCities();
-  const { cityName, emoji, date, id, position } = city;
+  const { cityName, emoji, date, _id, id, position } = city;
+  const cityId = _id || id; // Use MongoDB _id or fallback to id
 
   function handleClick(e) {
     e.preventDefault();
-    deleteCity(id);
+    deleteCity(cityId);
   }
 
   return (
     <li>
       <Link
         className={`${styles.cityItem} ${
-          id === currentCity.id ? styles["cityItem--active"] : ""
+          cityId === (currentCity._id || currentCity.id) ? styles["cityItem--active"] : ""
         }`}
-        to={`${id}?lat=${position.lat}&lng=${position.lng}`}
+        to={`${cityId}?lat=${position.lat}&lng=${position.lng}`}
       >
         <span className={styles.emoji}>{emoji}</span>
         <h3 className={styles.name}>{cityName}</h3>
