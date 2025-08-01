@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: worldwide-backend
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false  # Set this in Render dashboard
+    # Auto-deploy configuration
+    repo: https://github.com/Ashwaatthaamaaa/worldwide.git
+    branch: main
+    rootDir: backend
